@@ -1,0 +1,25 @@
+<head>
+    <title>Hyperlink Button</title>
+    <meta charset="utf-8">
+    
+    <style>
+        * {
+            font-size: 0;
+            overflow: hidden;
+            padding: 0;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <a href="https://hyperlink.neocities.org" target="_parent"><img src="/img/button/logo.png"></a>
+    </div>
+    {{#each subrings}}
+    <div>
+        <a href="https://{{this.previous}}.neocities.org" target="_parent"><img src="/img/button/left.png"></a>
+        <img src="/subring?name={{this.name}}">
+        <a href="https://{{this.next}}.neocities.org" target="_parent"><img src="/img/button/right.png"></a>
+    </div>
+    {{/each}}
+</body>
